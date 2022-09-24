@@ -1,0 +1,20 @@
+[tool.poetry]
+authors = ["Rishabh Mittal <mittalrishabh181@gmail.com>"]
+description = ""
+name = "options_backtest"
+version = "0.1.0"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pandas = "^1.5.0"
+numpy = "^1.23.3"
+matplotlib = "^3.6.0"
+
+[tool.poetry.dev-dependencies]
+ipykernel = "^6.15.3"
+jupyterlab = "^3.4.7"
+black = "^22.8.0"
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0"]
