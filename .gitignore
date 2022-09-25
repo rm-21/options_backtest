@@ -162,3 +162,5 @@ cython_debug/
 # Data Files
 data/
 *.csv
+SET_Init.ipynb
+!trade_book.csv
