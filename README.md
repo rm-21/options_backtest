@@ -52,9 +52,6 @@ Standard Deviation is in a well-defined range
 
 ## Strategy
 
-### Run Strategy
-The function will take time to run since it is event-based backtesting. It is recommended to load `trade_book.csv` for analysis.
-strategy.run_strategy()
 ### Analysis
 The analysis is not considering any costs of execution for now. Slippage equal to 3% on the negative side is being assumed to take a conservative view.
 
@@ -65,19 +62,7 @@ The analysis is not considering any costs of execution for now. Slippage equal t
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
