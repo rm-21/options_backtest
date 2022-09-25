@@ -62,8 +62,6 @@ class Strategy:
 
     def run_strategy(self):
         for c in range(16, len(self.data)):
-            print(f"Current candle: {self.data.iloc[c].name}")
-
             if Strategy.is_expiry(self.data.iloc[c]):
                 if Strategy.is_931(self.data.iloc[c]):
                     # Statics for the day
@@ -107,6 +105,7 @@ class Strategy:
                         self.trade_book.loc[len(self.trade_book), :] = list(
                             *self.entry_ce
                         )
+                        print(f"Entry made: {self.entry_ce}")
 
                     if (
                         (self.data.iloc[c].name.time() < self.close_time)
@@ -125,6 +124,7 @@ class Strategy:
                         self.trade_book.loc[len(self.trade_book), :] = list(
                             *self.entry_pe
                         )
+                        print(f"Entry made: {self.entry_pe}")
 
                     # SL
                     if (
@@ -144,6 +144,7 @@ class Strategy:
                         self.trade_book.loc[len(self.trade_book), :] = list(
                             *self.exit_ce
                         )
+                        print(f"SL hit    : {self.exit_ce}")
 
                     if (
                         (not not self.entry_pe)
@@ -162,6 +163,7 @@ class Strategy:
                         self.trade_book.loc[len(self.trade_book), :] = list(
                             *self.exit_pe
                         )
+                        print(f"SL hit    : {self.exit_pe}")
 
                     # Time
                     if self.data.iloc[c].name.time() == self.close_time:
@@ -179,6 +181,7 @@ class Strategy:
                             self.trade_book.loc[
                                 len(self.trade_book), :
                             ] = list(*self.exit_ce)
+                            print(f"Timed exit: {self.exit_ce}")
                         if (not not self.entry_pe) and (not self.exit_pe):
                             self.exit_pe.append(
                                 (
@@ -192,6 +195,7 @@ class Strategy:
                             self.trade_book.loc[
                                 len(self.trade_book), :
                             ] = list(*self.exit_pe)
+                            print(f"Timed exit: {self.exit_pe}")
 
                         # Reset variables
                         self.entry_ce.clear()
@@ -206,7 +210,3 @@ class Strategy:
 
                         ticker_ce = None
                         ticker_pe = None
-                else:
-                    print(
-                        f"{self.data.iloc[c].name} It is beyond trading range"
-                    )
