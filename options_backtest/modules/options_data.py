@@ -32,9 +32,8 @@ class OptionsData:
         ).reset_index(drop=True)
         return options_files
 
-    @staticmethod
-    def read_strike_data(file_path: str, datetime: dt.datetime):
-        strike_data = pd.read_csv(file_path)
+    def read_strike_data(self, file_name: str, datetime: dt.datetime):
+        strike_data = pd.read_csv(f"{self.data_loc}/{file_name}")
 
         # Refactor columns
         strike_data.columns = (
@@ -78,7 +77,6 @@ class OptionsData:
         strike_list: list,
         premium: int,
         index: Literal["NIFTY", "BANKNIFTY"],
-        file_path: str,
     ):
         ce_data = []
         pe_data = []
@@ -93,8 +91,9 @@ class OptionsData:
             )
 
             try:
-                ce_read = OptionsData.read_strike_data(
-                    file_path=f"{file_path}/{ce_file}", datetime=candle.name
+                ce_read = self.read_strike_data(
+                    file_name=ce_file,
+                    datetime=candle.name,
                 ).iloc[-1]
                 ce_tmp = ce_read.to_list()
                 ce_tmp.append(ce_read.name)
@@ -111,8 +110,9 @@ class OptionsData:
             )
 
             try:
-                pe_read = OptionsData.read_strike_data(
-                    file_path=f"{file_path}/{pe_file}", datetime=candle.name
+                pe_read = self.read_strike_data(
+                    file_name=pe_file,
+                    datetime=candle.name,
                 ).iloc[-1]
                 pe_tmp = pe_read.to_list()
                 pe_tmp.append(pe_read.name)
