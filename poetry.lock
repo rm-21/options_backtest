@@ -522,6 +522,17 @@ test = ["check-manifest", "coverage", "jupyterlab-server", "pre-commit", "pytest
 ui-tests = ["build"]
 
 [[package]]
+name = "jupyterlab-code-formatter"
+version = "1.5.3"
+description = "Code formatter for JupyterLab"
+category = "dev"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+jupyterlab = ">=3.0,<4.0"
+
+[[package]]
 name = "jupyterlab-pygments"
 version = "0.2.2"
 description = "Pygments theme using JupyterLab CSS variables"
@@ -1231,7 +1242,7 @@ test = ["websockets"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "b5629c59bd64f49ec3f7e6e8163df611dccfe5f2cccd37deb56c963fda7c206d"
+content-hash = "9d706a47bcc16ca8f537e5fbb1da9a7f3060b34df2de9abef636c8a97b3664f8"
 
 [metadata.files]
 anyio = [
@@ -1280,6 +1291,7 @@ jupyter-client = []
 jupyter-core = []
 jupyter-server = []
 jupyterlab = []
+jupyterlab-code-formatter = []
 jupyterlab-pygments = []
 jupyterlab-server = []
 kiwisolver = []

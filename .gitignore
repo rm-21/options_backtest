@@ -160,4 +160,5 @@ cython_debug/
 .idea/
 
 # Data Files
+data/
 *.csv
