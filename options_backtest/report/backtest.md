@@ -31,7 +31,7 @@
 
 
     
-![png](options_backtest/report/output_10_0.png)
+![png](output_10_0.png)
     
 
 
@@ -44,7 +44,7 @@ No sudden spikes or falls in the close price of the index.
 
 
     
-![png](options_backtest/report/output_13_0.png)
+![png](output_13_0.png)
     
 
 
@@ -143,7 +143,7 @@ The analysis is not considering any costs of execution for now. Slippage equal t
 
 
     
-![png](options_backtest/report/output_21_0.png)
+![png](output_21_0.png)
     
 
 
@@ -170,7 +170,7 @@ The analysis is not considering any costs of execution for now. Slippage equal t
 
 
     
-![png](options_backtest/report/output_22_0.png)
+![png](output_22_0.png)
     
 
 
@@ -185,7 +185,7 @@ The returns are more concentrated on the right. There is a possibility of a big 
 
 
     
-![png](options_backtest/report/output_25_0.png)
+![png](output_25_0.png)
     
 
 
@@ -198,7 +198,7 @@ Almost 72% of the time we exited because of a hard time stop. Rest 18% of the ti
 
 
     
-![png](options_backtest/report/output_28_0.png)
+![png](output_28_0.png)
     
 
 
@@ -212,7 +212,7 @@ There is clearly a systematic pattern to losses. By a simple visual analysis, it
 
 
     
-![png](options_backtest/report/output_31_0.png)
+![png](output_31_0.png)
     
 
 
